@@ -4,6 +4,7 @@ export const GameContext = React.createContext()
 
 export const GameProvider = (props) => {
     const [ games, setGames ] = useState([])
+    const [ gameTypes, setTypes ] = useState([])
 
     const getGames = () => {
         return fetch("http://localhost:8000/games", {
