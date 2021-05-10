@@ -29,9 +29,10 @@ export const GameForm = () => {
 
     const handleInput = (event) => {
 
+        console.log("current game", currentGame)
         const newGameState = { ...currentGame }
         let selectedValue = event.target.value
-        newGameState[event.target.id] = selectedValue
+        newGameState[event.target.name] = selectedValue
 
         setCurrentGame(newGameState)
     }
@@ -104,7 +105,7 @@ export const GameForm = () => {
 
                     // Send POST request to your API
                     createGame(game)
-                        .then(() => history.push("/games"))
+                        .then(() => history.push("/"))
                 }}
                 className="btn btn-primary">Create</button>
         </form>
