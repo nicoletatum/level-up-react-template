@@ -28,12 +28,9 @@ export const GameForm = () => {
     }, [])
 
     const handleInput = (event) => {
-
-        console.log("current game", currentGame)
         const newGameState = { ...currentGame }
         let selectedValue = event.target.value
         newGameState[event.target.name] = selectedValue
-
         setCurrentGame(newGameState)
     }
 
