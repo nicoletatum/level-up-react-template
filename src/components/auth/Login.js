@@ -9,6 +9,7 @@ export const Login = props => {
     const invalidDialog = React.createRef()
 
     const handleLogin = (e) => {
+        debugger
         e.preventDefault()
 
         return fetch("http://127.0.0.1:8000/login", {
