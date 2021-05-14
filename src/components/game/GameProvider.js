@@ -35,8 +35,8 @@ export const GameProvider = (props) => {
         .then(getGames)
     }
     const editGame = (game) => {
-        return fetch(`http://localhost:8000/games/${game.idd}/edit`, {
-            method:"POST",
+        return fetch(`http://localhost:8000/games/${game.id}`, {
+            method:"PUT",
             headers:{
                 "Authorization": `Token ${localStorage.getItem("lu_token")}`,
                 "Content-Type": "application/json"

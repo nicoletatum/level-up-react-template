@@ -132,23 +132,6 @@ export const GameForm = () => {
                         className="btn btn-primary">Create</button>
             }
 
-            <button type="submit"
-                onClick={evt => {
-                    evt.preventDefault()
-
-                    const game = {
-                        maker: currentGame.maker,
-                        name: currentGame.name,
-                        numberOfPlayers: parseInt(currentGame.numberOfPlayers),
-                        skillLevel: parseInt(currentGame.skillLevel),
-                        gameTypeId: parseInt(currentGame.gameTypeId)
-                    }
-
-                    // Send POST request to your API
-                    createGame(game)
-                        .then(() => history.push("/"))
-                }}
-                className="btn btn-primary">Create</button>
         </form>
     )
 }
